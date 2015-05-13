@@ -1,20 +1,19 @@
 {
-    "name": "steam-pirate-syntax",
-    "theme": "syntax",
-    "version": "0.1.0",
-    "description": "Syntax theme with Glows! Inspired by https://atom.io/themes/neon-syntax  and https://atom.io/themes/base16-eighties-one-dark . Companion syntax theme for https: //atom.io/themes/steam-pirate-ui",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/v3ss0n/steam-pirate-syntax"
-    },
-    "license": "MIT",
-    "engines": {
-        "atom": ">0.50.0"
-    },
-    "readmeFilename": "README.md",
-    "bugs": {
-        "url": "https://github.com/v3ss0n/steam-pirate-syntax/issues"
-    },
-    "homepage": "https://github.com/v3ss0n/steam-pirate-syntax"
-
+  "name": "steam-pirate-syntax",
+  "theme": "syntax",
+  "version": "0.2.0",
+  "description": "Syntax theme with Glows! Inspired by https://atom.io/themes/neon-syntax  and https://atom.io/themes/base16-eighties-one-dark . Companion syntax theme for https: //atom.io/themes/steam-pirate-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v3ss0n/steam-pirate-syntax"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/v3ss0n/steam-pirate-syntax/issues"
+  },
+  "homepage": "https://github.com/v3ss0n/steam-pirate-syntax"
 }
