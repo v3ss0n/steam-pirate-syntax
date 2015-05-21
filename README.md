@@ -16,8 +16,17 @@ base16-eighties-one-dark : https://atom.io/themes/base16-eighties-one-dark
 
 - With steam-pirate-ui
 
+![steam-pirate-syntax](https://cloud.githubusercontent.com/assets/419606/7747522/222eb726-ffe1-11e4-916b-775f5b2c090a.png)
 
+# Changes
 
-- With one-dark-ui
+## 0.1.0 - First Release
+* Initial package
+
+## 0.2.0 - Update
+
+- Fixed some handlebar template in HBS files (note html files cannot tag mustache templates so please open issue at related repo). closes #1
+- Highlighted HTML Attribs names with different color
+- Added specs.
 
 
