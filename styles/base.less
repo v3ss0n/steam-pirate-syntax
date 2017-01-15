@@ -1,6 +1,5 @@
 @import "syntax-variables";
-atom-text-editor,
-:host {
+.editor {
     background-color: @syntax-background-color;
     color: @syntax-text-color;
     text-rendering: optimizeSpeed;
@@ -53,7 +52,7 @@ atom-text-editor,
     }
 }
 atom-text-editor.is-focused,
-:host {
+.editor {
     .cursor {
         border-color: @syntax-cursor-color;
         // box-shadow: 0px 0px 20px 3px  fade(lightblue,50%);
@@ -66,164 +65,166 @@ atom-text-editor.is-focused,
         box-shadow: 0 0 5px 0 fade( @base0D, 60%);
     }
 }
-.comment {
+
+.syntax--comment {
     color: lighten(@base02,15%);
 }
-.string {
+.syntax--string {
     color: @base0E;
     text-shadow: 0 0 @blur rgba(170, 175, 219, @opacity);
 }
-.constant.numeric {
+.syntax--constant.syntax--numeric {
     color: @base09;
     text-shadow: 0 0 @blur rgba(119, 194, 187, @opacity);
 }
-.constant.character,
-.constant.other {
+.syntax--constant.syntax--character,
+.syntax--constant.syntax--other {
     color: @base0A;
     text-shadow: 0 0 @blur rgba(34, 200, 153, @opacity);
 }
-.constant.language {
+.syntax--constant.syntax--language {
     color: #bdbe82;
     text-shadow: 0 0 @blur rgba(189, 190, 130, @opacity);
 }
-.storage {
+.syntax--storage {
     color: @base08;
     text-shadow: 0 0 @blur rgba(139, 93, 223, @opacity);
 }
-.meta.function-call {
+.syntax--meta.syntax--function-call {
     color: @base0D;
     text-shadow: 0 0 @blur rgba(5, 214, 249, @opacity);
 }
-.support.function {
+.syntax--support.syntax--function {
     color: @base0D;
     text-shadow: 0 0 @blur rgba(189, 190, 130, @opacity);
 }
-.variable.other.external-symbol {
+.syntax--variable.syntax--other.syntax--external-symbol {
     color: @base08;
     text-shadow: 0 0 @blur rgba(187, 223, 221, @opacity);
 }
-.variable.language,
-.variable.other {
+.syntax--variable.syntax--language,
+.syntax--variable.syntax--other {
     color: @base08;
     text-shadow: 0 0 @blur rgba(58, 175, 255, @opacity);
 }
-.variable.parameter {
+.syntax--variable.syntax--parameter {
     color: @base0D;
     text-shadow: 0 0 @blur fadeout(rgba(5, 214, 249, @opacity),10);
 }
-.keyword {
+.syntax--keyword {
     color: @base0B;
     text-shadow: 0 0 @blur rgba(34, 255, 169, @opacity);
 }
-.entity {
-    &.name.type {
+
+.syntax--entity {
+    &.syntax--name.syntax-type {
         color: @base05;
         text-shadow: 0 0 @blur rgba(175, 119, 169, @opacity);
     }
-    &.name.class {
+    &.syntax--name.syntax--class {
         color: @base0D;
         text-shadow: 0 0 @blur rgba(185, 152, 223, @opacity);
     }
-    &.name.structure {
+    &.syntax--name.syntax--structure {
         color: @base05;
         text-shadow: 0 0 @blur rgba(185, 152, 223, @opacity);
     }
-    &.name.tag {
+    &.syntax--name.syntax--tag {
         color: @base08;
         text-shadow: 0 0 @blur rgba(73, 166, 210, @opacity);
     }
-    &.name.function {
+    &.syntax--name.syntax--function {
         color: @base0D;
         text-shadow: 0 0 @blur rgba(79, 111, 255, @opacity);
     }
-    &.name.function.io {
+    &.syntax--name.syntax--function.syntax--io {
         color: @base05;
         text-shadow: 0 0 @blur rgba(223, 179, 172, @opacity);
     }
-    &.name.function.misc {
+    &.syntax--name.syntax--function.syntax--misc {
         color: @base05;
         text-shadow: 0 0 @blur rgba(227, 228, 169, @opacity);
     }
-    &.name.function.predicate {
+    &.syntax--name.syntax--function.syntax--predicate {
         color: @syntax-text-color;
         text-shadow: 0 0 @blur rgba(165, 223, 147, @opacity);
     }
-    &.other.attribute-name {
+    &.syntax--other.syntax--attribute-name {
         color: @base0E;
         text-shadow: 0 0 @blur rgba(73, 134, 194, @opacity);
     }
-    &.other.attribute-name.html {
+    &.syntax--other.syntax--attribute-name.syntax--html {
         color: @orange;
         text-shadow: 0 0 @blur rgba(73, 134, 194, @opacity);
     }
-    &.other.inherited-class {
+    &.syntax--other.syntax--inherited-class {
         color: @base0A;
         text-shadow: 0 0 @blur rgba(73, 134, 194, @opacity);
     }
 }
-.meta.function-call {
+.syntax--meta.syntax--function-call {
     color: @base06;
     text-shadow: 0 0 @blur rgba(5, 214, 249, 0.8);
 }
-.meta.function-call.arguments {
+.syntax--meta.syntax-function-call.syntax--arguments {
     color: @syntax-text-color;
     text-shadow: 0 0 @blur rgba(5, 214, 249, 0.8);
 }
-.meta.class,
-.entity.name.class,
-.entity.name.type.class {
+.syntax--meta.syntax--class,
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
     color: @base07;
     text-shadow: 0 0 @blur rgba(255, 51, 153, @opacity);
 }
-.support.class {
+.syntax--support.syntax--class {
     color: @base0A;
     text-shadow: 0 0 @blur rgba(239, 106, 167, @opacity);
 }
-.invalid {
+.syntax--invalid {
     color: @dark-red;
     text-shadow: 0 0 @blur #cc1b27;
 }
-.string .source {
+.stynax--string .stynax--source {
     font-style: italic;
     color: @base09;
     text-shadow: 0 0 @blur rgba(0, 153, 255, @opacity);
 }
-.entity.name.tag {
+.syntax--entity.syntax--name.syntax--tag {
     color: @base0C;
     text-shadow: 0 0 @blur rgba(73, 166, 210, @opacity);
 }
-.markup.heading {
+.syntax--markup.syntax--heading {
     font-weight: bold;
     color: @base0B;
     text-shadow: 0 0 @blur rgba(34, 255, 169, @opacity);
 }
-.markup.italic {
+.syntax--markup.syntax--italic {
     font-style: italic;
     color: @base0E;
     text-shadow: 0 0 @blur rgba(155, 169, 253, @opacity);
 }
-.markup.bold {
+.syntax--markup.syntax--bold {
     font-weight: bold;
     color: @base03;
     text-shadow: 0 0 @blur rgba(155, 169, 253, @opacity);
 }
-.markup.underline {
+.syntax--markup.syntax--underline {
     text-decoration: underline;
     color: @purple;
     text-shadow: 0 0 @blur rgba(139, 93, 223, @opacity);
 }
-.gfm {
-    .link .entity {
+.syntax--gfm {
+    .syntax--link .syntax--entity {
         text-decoration: underline;
         color: @base0C;
         text-shadow: 0 0 @blur rgba(58, 175, 255, @opacity);
     }
 }
-.punctuation.definition.tag {
+.syntax--punctuation.syntax--definition.syntax--tag {
         color: @base0C;
         text-shadow: 0 0 @blur rgba(73, 166, 210, @opacity);
 }
-.meta.tag.template {
+.syntax--meta.syntax--tag.syntax--template {
         color: @base08;
         text-shadow: 0 0 @blur rgba(227, 228, 169, @opacity);
 }
